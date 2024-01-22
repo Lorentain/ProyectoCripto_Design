@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Importar estilos bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Importar archivo de estilos css propios -->
+    <link rel="stylesheet" href="./style.css"> 
+     <!-- Importar Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Importar Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon"> 
+    <title>Bootstrap 5</title>
+</head>
+<body>
+
+  <!-- Comienzo del menú -->
+  <header class="background-container fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#"><p id="header__titulo">coinbase</p></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="menuLogin collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+            <li class="enlacesCentro nav-item">
+              <a href="#container-precios" class="text-dark fw-bold">Precios</a>
+            </li>
+            <li class="enlacesCentro nav-item">
+              <a href="#container-aprende" class="text-dark fw-bold">Aprende</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menuEnlaces collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+            <li class="nav-item">
+              <button type="submit" class="btn__menu2 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</button>
+            </li>
+            <li class="nav-item">
+              <button type="submit" class="btn__menu fw-bold" data-bs-toggle="modal" data-bs-target="#registrarseModal">Empezar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Fin del Menú -->
+
+    
+  <!-- Inicio Modal Iniciar Sesión -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="d-flex flex-column">
+            <label class="fs-5" for="email">Email</label>
+            <input class="fs-5" type="email" id="email">
+
+            <label class="fs-5" for="pass">Contraseña</label>
+            <input class="fs-5" type="password" id="pass">
+          </form>
+          <div class="d-flex align-items-center justify-content-center gap-3 p-3">
+            <a href="#" class="text-end"><img class="w-25" src="./img/github.png"></a>
+            <a href="#" class="text-start"><img class="w-25" src="./img/google.png"></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Modal Iniciar Sesión -->
+
+  <!-- Inicio Modal Registrarse -->
+  <div class="modal fade" id="registrarseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="d-flex flex-column">
+            <label class="fs-5" for="email">Email</label>
+            <input class="fs-5" type="email" id="email">
+
+            <label class="fs-5" for="pass">Contraseña</label>
+            <input class="fs-5" type="password" id="pass">
+          </form>
+          <div class="d-flex align-items-center justify-content-center gap-3 p-3">
+            <a href="#" class="text-end"><img class="w-25" src="./img/github.png"></a>
+            <a href="#" class="text-start"><img class="w-25" src="./img/google.png"></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Registrarse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Modal Registrarse -->
+
+  <!-- Comienzo Main Hero -->
+  <main id="main-hero" class="container-fluid position-relative d-flex flex-column flex-md-row">
+    <div id="contenedor__izquierda" class="w-50 p-5 d-flex justify-content-center flex-column text-left gap-3">
+        <a href="" class="color-azul fs-4 d-flex align-items-center fw-bold gap-3"><img src="./img/logoBitcoin.png">Mira este portafolio<img class="imgFlecha" src="./img/flecha-derecha.png"></a>
+        <h1 class="text-dark fs-1 fw-bold" style="font-size: calc(3.3rem + 0.5vw) !important;">Mira este portafolio <br>de cripto</h1>
+        <p class="fs-4 fw-bold">Coinbase es la mejor app para comprar y vender criptomonedas. Registrate y empieza ahora!</p>
+        <form class="formEmpezar d-flex">
+          <input class="inputCorreo fs-6" type="email" placeholder="Correo Electrónico">
+          <input class="inputEnviar fs-6 border-0 bg-primary rounded-1 text-light" type="submit" value="Empezar">
+        </form>
+    </div>
+    <div id="contenedor__derecha" class="w-50 d-flex justify-content-center">
+        <img src="./img/movil.png">
+    </div>
+  </main>
+  <!-- Fin Main Hero -->
+
+  <!-- Comienzo Sección Precios -->
+  <section id="container-precios" class="container-fluid d-flex justify-content-center align-items-center flex-column p-5 gap-5">
+
+    <div class="container-fluid justify-content-center align-items-center p-3">
+        <h1 class="text-center fs-1 fw-bold">Los mejores precios de criptomonedas aquí!</h1>
+    </div>
+    <!-- Comienzo Grupo1 Tarjetas -->
+    <div class="card-group d-flex flex-md-row flex-column gap-5"> 
+      <div class="card p-3" style="width: 18rem;">
+          <img src="./img/precioBitcoin.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title fs-2 fw-bold text-primary">BitCoin</h5>
+            <p class="card-text fs-5">Precio: 20.000€</p>
+            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+          </div>
+        </div>
+        <div class="card p-3" style="width: 18rem;">
+          <img src="./img/precioEthereum.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title fs-2 fw-bold text-primary">Ethereum</h5>
+            <p class="card-text fs-5">Precio: 5.000€</p>
+            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+          </div>
+        </div>
+        <div class="card p-3" style="width: 18rem;">
+          <img src="./img/precioLitecoin.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title fs-2 fw-bold text-primary">Lite Coin</h5>
+            <p class="card-text fs-5">Precio: 1.000€</p>
+            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+          </div>
+        </div>
+    </div>
+    <!-- Fin Grupo1 Tarjetas -->
+
+    <!-- Comienzo Grupo2 Tarjetas -->
+    <div class="card-group d-flex flex-md-row flex-column gap-5"> 
+      <div class="card p-3" style="width: 18rem;">
+          <img src="./img/precioCardano.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title fs-2 fw-bold text-primary">Cardano</h5>
+            <p class="card-text fs-5">Precio: 3.000€</p>
+            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+          </div>
+        </div>
+        <div class="card p-3" style="width: 18rem;">
+          <img src="./img/precioDogecoin.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title fs-2 fw-bold text-primary">DogeCoin</h5>
+            <p class="card-text fs-5">Precio: 0.075€</p>
+            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+          </div>
+        </div>
+        <div class="card p-3" style="width: 18rem;">
+          <img src="./img/precioSolana.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title fs-2 fw-bold text-primary">Solana</h5>
+            <p class="card-text fs-5">Precio: 500€</p>
+            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+          </div>
+        </div>
+    </div>
+    <!-- Fin Grupo2 Tarjetas -->
+  </section>
+  <!-- Fin Sección Precios -->
+
+  <!-- Comienzo Sección Aprender -->
+  <section id="container-aprende" class="container-fluid d-flex justify-content-center align-items-center flex-column mb-5">
+    <div class="container-fluid justify-content-center align-items-center p-3">
+      <h1 class="text-center fs-1 fw-bold">Aprende sobre criptomonedas</h1>
+    </div>
+    <!-- Comienzo Acordeón Aprender -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item border border-dark border-2">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            ¿Que son las criptomonedas?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p class="fs-5">Una criptomoneda es un activo digital que emplea un cifrado criptográfico para garantizar su titularidad y 
+              asegurar la integridad de las transacciones, y controlar la creación de unidades adicionales, es decir, evitar que 
+              alguien pueda hacer copias como haríamos, por ejemplo, con una foto. Estas monedas no existen de forma física: se 
+              almacenan en una cartera digital.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item border-start border-end border-dark border-2">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            ¿Como comprar criptomonedas?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p class="fs-5">Existen distintas formas de comprar criptomonedas pero lo más importante es tener una cartera digital, 
+              normalmente llamada exchange. Aquí en nuestra página web ofrecemos diferentes criptomonedas, que son las más comúnes
+              y podrá consultar su valor al mismo tiempo que comprarlas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item border-start border-end border-dark border-2">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Consejos para invertir en criptomonedas
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p class="fs-5">Existen dos formas principales para invertir en criptomonedas. La primera es comprar criptomonedas en
+              un exchange, a través de un bróker, y la segunda es hacer trading de criptomonedas con productos derivados, como 
+              los CFD,
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Acordeón Aprender -->
+  </section>
+  <!-- Fin Sección Aprender -->
+
+  <!-- Comienzo Sección Footer -->
+  <footer id="container-footer" class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row">
+    <div class="footer__item">
+        <a href="#"><h2 class="text-primary fw-bold">coinbase</h2></a>
+        <p class="fs-6">©2024 Lorenzo Herrero</p>
+    </div>
+
+    <div class="footer__item">
+        <a href="#container-precios"><h5 class="fw-bold mb-0 text-dark">Precios</h5></a>
+        <h6>Precio de Bitcoin</h6>
+    </div>
+
+    <div class="footer__item">
+        <a href="#container-aprende"><h5 class="fw-bold mb-0 text-dark">Aprender</h5></a>
+        <h6>¿Que son las criptomonedas?</h6>
+    </div>
+
+    <div class="footer__item">
+        <a href="#"><h5 class="fw-bold mb-0 text-dark">Acerca de</h5></a>
+        <h6>Políticad de privacidad</h6>
+    </div>
+  </footer>
+  <!-- Fin Sección Footer -->
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
